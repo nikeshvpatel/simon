@@ -14,6 +14,13 @@ $(document).keypress(function() {
     NewGame = true;
   }
 });
+$(document).click(function() {
+  if (!NewGame) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    NewGame = true;
+  }
+});
 
 $(".btn").click(function() {
 
