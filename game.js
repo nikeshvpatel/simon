@@ -1,4 +1,8 @@
 
+alert("How to play a game?\n 1.	Press any button or click on screen to start a level.\n 2.	Notice which button is flashed, and press that button 1 time. \n 3.	Subsequently, another random button will flash. So repeat sequence from level 1. \n Example. \nFlash: red, \n Click: red \n Flash: green \n Click: red, green \n Flash: red \n Click: red, green, red \n Flash: Yellow \n Click: red, green, red, yellow. \n And so On….")
+
+
+
 var buttonColours = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];
