@@ -40,7 +40,7 @@ function checkAnswer(currentLevel) {
       playSound("wrong");
       $("body").addClass("game-over");
       var levelDefine= level -1;
-      $("#level-title").html("<h2 class='redColor'>Game Over</h2><h2 class='fonty'>You have passed Level "+levelDefine+"</h2><h2> click to Restart</h2>");
+      $("#level-title").html("<h2 class='redColor'>Game Over</h2><h2 class='fonty'>You have reached @ Level "+levelDefine+"</h2><h2> click to Restart</h2>");
 
       setTimeout(function () {
         $("body").removeClass("game-over");
