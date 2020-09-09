@@ -25,7 +25,7 @@ $(".btn").click(function() {
   playSound(userChosenColour);
   animatePress(userChosenColour);
 
-  checkAnswer(userClickedPattern.length-1);
+    checkAnswer(userClickedPattern.length-1);
 });
 
 function checkAnswer(currentLevel) {
@@ -40,21 +40,19 @@ function checkAnswer(currentLevel) {
       playSound("wrong");
       $("body").addClass("game-over");
       var levelDefine= level -1;
-      $("#level-title").html("<h2 class='redColor'>Game Over</h2><h2 class='fonty'>You have passed Level "+levelDefine+"</h2><h2> Double click to Restart</h2>");
+      $("#level-title").html("<h2 class='redColor'>Game Over</h2><h2 class='fonty'>You have passed Level "+levelDefine+"</h2><h2> click to Restart</h2>");
 
       setTimeout(function () {
         $("body").removeClass("game-over");
       }, 200);
-
-      startOver();
     }
 }
 
 
 function nextSequence() {
   userClickedPattern = [];
-  level++;
   $("#level-title").text("Level " + level);
+  level++;
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
@@ -79,4 +77,9 @@ function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
+}
+
+$(".restart").on("click",Nikesh)
+function Nikesh(){
+  startOver();
 }
